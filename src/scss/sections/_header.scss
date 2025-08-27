@@ -1,0 +1,45 @@
+.header {
+    padding: 35px 0;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        &-nav {
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 10px 23px;
+            border-radius: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 500;
+            ul {
+                display: flex;
+                gap: 1em;
+            }
+            li {
+                padding: 6px 20px;
+                background-color: var(--color-gray-300);
+                border-radius: 25px;
+            }
+        }
+        &-login {
+            background-color: var(--color-gray-300);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+    }
+}

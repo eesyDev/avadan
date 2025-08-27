@@ -1,0 +1,23 @@
+.hero {
+    background-image: url('../img/hero.png');
+    padding-top: 150px;
+    min-height: 700px;
+    color: #fff;
+    .labeled {
+        color: var(--color-black);
+        font-weight: 800;
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 20px;
+    }
+    &__wrapper {
+        max-width: 70%;
+    }
+    &__title {
+        position: relative;
+        .label {
+            position: absolute;
+        }
+    }
+
+}

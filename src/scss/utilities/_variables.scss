@@ -1,0 +1,61 @@
+// --- PATHS ---
+$imgpath: "../img";
+
+// --- BREAKPOINTS ---
+$w-mob-s:      450px;  // Small mobile
+$w-mob:        640px;  // Mobile
+$w-tab:        768px;  // Tablet
+$w-tab-lg:     1024px; // Tablet large
+$w-laptop:     1200px; // Laptop
+$w-desktop-sm: 1400px; // Laptop
+$w-min:        320px;  // Min screen
+$w-max:        2560px; // Max screen
+
+:root {
+    --font-family: "Montserrat Alternates";
+    --font-family-alt: "Unbounded";
+    --color-gray-100: #F2F2F2;
+    --color-gray-150: rgba(102, 102, 102, 0.8);
+    --color-gray-200: #F9F9F9;
+    --color-gray-300: #D9D9D9;
+    --color-gray-400: #666666;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-primary: #CD1A40;
+}
+
+.flex {
+    display: flex;
+}
+.flex-between {
+    justify-content: space-between;
+}
+.flex-center {
+    justify-content: center;
+}
+.items-center {
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    height: 40px;
+    padding: 8px 25px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+}
+
+.button--primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 500;
+    border-radius: 25px;
+}
+.button--outlined {
+    color: var(--color-black);
+    border: 1px solid var(--color-black);
+    border-radius: 25px;
+}
