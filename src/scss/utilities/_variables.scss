@@ -46,6 +46,16 @@ $w-max:        2560px; // Max screen
     align-items: center;
     gap: 10px;
     border-radius: 20px;
+    width: fit-content;
+    &.button-lg {
+        height: 54px;
+        border-radius: 50px;
+    }
+    i, svg {
+        display: flex;
+        align-items: center;
+        transition: all 0.2s ease;
+    }
 }
 
 .button--primary {
@@ -58,4 +68,52 @@ $w-max:        2560px; // Max screen
     color: var(--color-black);
     border: 1px solid var(--color-black);
     border-radius: 25px;
+}
+
+.button--secondary {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-family: var(--font-family-alt);
+    i {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--color-primary);
+    }
+}
+
+.tag {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-gray-300);
+    font-family: var(--font-family-alt);
+    font-weight: 400;
+    color: var(--color-black);
+    border-radius: 50px;
+    height: 40px;
+    padding: 0 16px;
+    white-space: nowrap;
+}
+
+@media (hover: hover) {
+    .button--primary {
+        &:hover {
+            filter: brightness(0.9);
+            i svg {
+                transform: translate(3px, -3px);
+            }
+        }
+    }
+
+    .button--secondary {
+        &:hover {
+            filter: brightness(0.9);
+            i svg {
+                transform: translate(3px, -3px);
+            }
+        }
+    }
+    
 }
