@@ -1,0 +1,74 @@
+.map {
+    &__inner {
+        // transform: translateY(-170px);
+        margin-bottom: -160px;
+    }
+    &__card {
+        max-width: 330px;
+        padding: 12px;
+        padding-bottom: 24px;
+        box-shadow: 0 24px 90px rgba(192, 188, 161, 0.22);
+        border-radius: 16px;
+        background-color: var(--color-white);
+        img {
+            border-radius: 16px;
+            width: 100%;
+            height: 161px;
+        }
+        &-title {
+            font-family: var(--font-family-alt);
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1.2;
+            margin-top: 24px;
+
+        }
+        &-text {
+            color: var(--color-gray-400);
+            line-height: 1.26;
+            margin-top: 16px;
+        }
+        &-link {
+            margin-top: 16px;
+            height: 37px;
+        }
+    }
+}
+
+.map__wrapper { position: relative; }
+.map__inner svg { display:block; width:100%; height:auto; }
+
+.map__tours-wrapper { 
+  position: absolute; 
+  inset: 0;     /* слой над SVG */
+  pointer-events: none;
+}
+
+.map__card {
+  position: absolute;
+  max-width: 320px;
+  opacity: 0;
+  transform: translate(-50%, -100%) scale(.96);
+  transition: opacity .25s ease, transform .25s ease, filter .25s ease;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,.15));
+  pointer-events: none; /* не ловит клики, пока скрыта */
+}
+
+.map__card.is-visible {
+  opacity: 1;
+  transform: translate(-50%, -110%) scale(1);
+  pointer-events: auto; /* ссылки кликабельны только у видимой */
+  z-index: 10;
+}
+
+/* Контур и ховер для регионов */
+.region { fill: #E8E8E8; transition: fill .2s ease; cursor: pointer; }
+.region.is-active { fill: #DCEBFF; }           /* подсветка */
+.pin { cursor: pointer; }
+.pin.is-active circle:first-child { stroke: #1f75fe; }  /* обводка пина при активе */
+
+/* На маленьких экранах карточки можно двигать ниже пина */
+@media (max-width: 768px) {
+  .map__card { max-width: 260px; transform: translate(-50%, -90%) scale(.96); }
+  .map__card.is-visible { transform: translate(-50%, -100%) scale(1); }
+}

@@ -82,6 +82,13 @@ $w-max:        2560px; // Max screen
     }
 }
 
+.button--black {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-weight: 500;
+    border-radius: 25px;
+}
+
 .tag {
     display: flex;
     width: fit-content;

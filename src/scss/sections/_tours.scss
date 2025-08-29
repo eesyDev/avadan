@@ -1,0 +1,109 @@
+.tours {
+    position: relative;
+    padding-bottom: 180px;
+    .bg {
+        position: absolute;
+        top: auto;
+        left: -180px;
+        bottom: -170px;
+    }
+}
+
+.tours__wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+.tours__info {
+    flex: 0 0 45%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    h2 {
+        margin-bottom: 60px;
+    }
+    p {
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        color: #666;
+    }
+}
+
+
+/* Правая часть - контейнер для стекинга */
+.tours__tabs {
+    flex: 1;
+    position: relative;
+    height: 600vh; /* Высота для скролла */
+    padding: 40px;
+}
+
+/* Каждая карточка sticky с одинаковым top */
+.tour__tab {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    height: calc(100vh - 80px);
+    max-height: 600px;
+    padding: 20px 34px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background: var(--color-gray-100);
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+/* Устанавливаем разные top для каждой карточки */
+.tour__tab:nth-child(1) { top: 0px; }
+.tour__tab:nth-child(2) { top: 70px; }
+.tour__tab:nth-child(3) { top: 140px; }
+.tour__tab:nth-child(4) { top: 210px; } 
+.tour__tab:nth-child(5) { top: 280px; } 
+.tour__tab:nth-child(6) { top: 350px; } 
+
+// .tour__tab:hover {
+//     transform: translateY(-6px);
+// }
+
+/* Заголовок карточки */
+.tour__tab-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tour__tab-heading h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.tour__tab-heading i {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+/* Контент карточки */
+.tour__tab-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tour__tab-info .text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+
