@@ -48,6 +48,7 @@
     &__paragraph {
         width: 65%;
         margin-top: 28px;
+        font-size: 20px;
     }
     &__tags {
         display: flex;
@@ -141,6 +142,30 @@
     .destination::before {
         background-image: url('../img/Location.svg');   
         
+    }
+}
+
+.about-hero {
+    min-height: 630px;
+    .hero__wrapper {
+        max-width: 70%;
+        margin: 60px auto 0;
+        text-align: center;
+    }
+    .hero__paragraph {
+        width: 100%;
+    }
+    .h1 {
+        position: relative;
+    }
+    .label {
+        height: 33px;
+        font-size: 13px;
+        font-weight: 500;
+        width: 320px;
+        padding: 8px 20px;
+        left: 58%;
+        bottom: -10px;
     }
 }
 @media (max-width: 1399px) {

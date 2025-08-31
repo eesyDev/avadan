@@ -101,17 +101,28 @@ jQuery(function($){
     arrows: true,
     dots: true
   });
-  $(document).ready(function() {
-    // Обработчик клика по заголовкам секций
-    $('.filter-header').on('click', function() {
-        $(this).parent().toggleClass('collapsed');
-    });
 
-    // Добавляем обработчики для чекбоксов
-    $('input[type="checkbox"]').on('change', function() {
-        console.log(`${this.id}: ${this.checked}`);
-    });
-});
+  $('.director-slider').slick({
+    centerMode: true,
+    centerPadding: '0',
+    slidesToShow: 1,   // показываем 5 слайдов
+    infinite: true,
+    autoplay: true,
+    dots: true
+  });
+
+
+  $(document).ready(function() {
+      // Обработчик клика по заголовкам секций
+      $('.filter-header').on('click', function() {
+          $(this).parent().toggleClass('collapsed');
+      });
+
+      // Добавляем обработчики для чекбоксов
+      $('input[type="checkbox"]').on('change', function() {
+          console.log(`${this.id}: ${this.checked}`);
+      });
+  });
 });
 
 // const gallerySwiper = new Swiper('.gallery__slider', {
