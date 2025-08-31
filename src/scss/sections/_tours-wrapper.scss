@@ -1,0 +1,12 @@
+.tours {
+    &__wrapper {
+        display: flex;
+        gap: 32px;
+    }
+    &__inner {
+        flex: 1 1 calc(67% - 32px);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 34px;
+    }
+}

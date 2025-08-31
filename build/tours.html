@@ -118,7 +118,318 @@
         </div>
     </div>
     <div class="spacer spacer--120"></div>
-    <div class="spacer spacer--50"></div>
+    <section class="tours">
+        <div class="container">
+            <div class="tours__wrapper">
+                <div class="filter-container">
+                    <!-- Виды отдыха -->
+                    <div class="filter-section">
+                        <button class="filter-header">
+                            <span>Виды отдыха</span>
+                            <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="filter-content">
+                            <div class="checkbox-item">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="multi-day" checked>
+                                    <span class="checkmark"></span>
+                                    
+                                </div>
+                                <label class="checkbox-label" for="multi-day">Многодневные туры</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="day-trips">
+                                    <span class="checkmark"></span>
+                                    
+                                </div>
+                                <label class="checkbox-label" for="day-trips">Туры выходного дня</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="excursions" checked>
+                                    <span class="checkmark"></span>
+                                   
+                                </div>
+                                <label class="checkbox-label" for="excursions">Экскурсии</label>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Регион -->
+                    <div class="filter-section">
+                        <button class="filter-header">
+                            <span>Регион</span>
+                            <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="filter-content">
+                            <div class="checkbox-item">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="georgia">
+                                    <span class="checkmark"></span>
+                                    
+                                </div>
+                                <label class="checkbox-label" for="georgia">Грузия</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="dagestan">
+                                    <span class="checkmark"></span>
+                                    
+                                </div>
+                                <label class="checkbox-label" for="dagestan">Дагестан</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="ingushetia" checked>
+                                    <span class="checkmark"></span>
+                                   
+                                </div>
+                                <label class="checkbox-label" for="ingushetia">Ингушетия</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="kbr">
+                                    <span class="checkmark"></span>
+                                    
+                                </div>
+                                <label class="checkbox-label" for="kbr">Кабардино-Балкария</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="kmv">
+                                    <span class="checkmark"></span>
+                                    
+                                </div>
+                                <label class="checkbox-label" for="kmv">Кавказские Минеральные Воды</label>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Тип тура -->
+                    <div class="filter-section">
+                        <button class="filter-header">
+                            <span>Тип тура</span>
+                            <svg class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="filter-content">
+                            <div class="checkbox-item">
+                                <div class="checkbox">
+                
+                                    <input type="checkbox" id="architecture">
+                                    <span class="checkmark"></span>
+                                </div>
+                                <label class="checkbox-label" for="architecture">Архитектура</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="nature">
+                                    <span class="checkmark"></span>
+                                    
+                                </div>
+                                <label class="checkbox-label" for="nature">Природа</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="youth" checked>
+                                    <span class="checkmark"></span>
+                                    
+                                </div>
+                                <label class="checkbox-label" for="youth">Молодежный</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="local-traditions">
+                                    <span class="checkmark"></span>
+                                    
+                                </div>
+                                <label class="checkbox-label" for="local-traditions">Местные традиции</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="trekking">
+                                    <span class="checkmark"></span>
+                                    
+                                </div>
+                                <label class="checkbox-label" for="trekking">Трекинг</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="jeep-tour">
+                                    <span class="checkmark"></span>
+                                    
+                                </div>
+                                <label class="checkbox-label" for="jeep-tour">Джип тур</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tours__inner">
+                    <div class="tour-card">
+                        <div class="tour-card__image"><img src="assets/img/c2.png" alt=""></div>
+                        <div class="tour-card__info">
+                            <h4 class="h4">Южный Дагестан – пятидневный тур</h4>
+                            <div class="tour-card__tags">
+                                <span class="tag">
+                                    <i><img src="assets/img/bank.svg" alt=""></i>
+                                    Архитектура
+                                </span>
+                                <span class="tag">
+                                    <i><img src="assets/img/emoji-happy.svg" alt=""></i>
+                                    Молодежный
+                                </span>
+                                <span class="tag">
+                                    <i><img src="assets/img/bank.svg" alt=""></i>
+                                    Архитектура
+                                </span>
+                                <span class="tag">
+                                    <i><img src="assets/img/emoji-happy.svg" alt=""></i>
+                                    Молодежный
+                                </span>
+                            </div>
+                            <div class="tour-card__descr">
+                                Южный Дагестан — это уникальный уголок России, где горные цепи встречаются с бескрайними просторами глубокой долины, а традиции сплетаются с современностью.
+                            </div>
+                            <div class="tour-card__price">
+                                от 39000 ₽/ чел.
+                            </div>
+                            <a href="" class="button button--black">Выбрать тур</a>
+                        </div>
+                    </div>
+                    <div class="tour-card">
+                        <div class="tour-card__image"><img src="assets/img/c2.png" alt=""></div>
+                        <div class="tour-card__info">
+                            <h4 class="h4">Южный Дагестан – пятидневный тур</h4>
+                            <div class="tour-card__tags">
+                                <span class="tag">
+                                    <i><img src="assets/img/bank.svg" alt=""></i>
+                                    Архитектура
+                                </span>
+                                <span class="tag">
+                                    <i><img src="assets/img/emoji-happy.svg" alt=""></i>
+                                    Молодежный
+                                </span>
+                                <span class="tag">
+                                    <i><img src="assets/img/bank.svg" alt=""></i>
+                                    Архитектура
+                                </span>
+                                <span class="tag">
+                                    <i><img src="assets/img/emoji-happy.svg" alt=""></i>
+                                    Молодежный
+                                </span>
+                            </div>
+                            <div class="tour-card__descr">
+                                Южный Дагестан — это уникальный уголок России, где горные цепи встречаются с бескрайними просторами глубокой долины, а традиции сплетаются с современностью.
+                            </div>
+                            <div class="tour-card__price">
+                                от 39000 ₽/ чел.
+                            </div>
+                            <a href="" class="button button--black">Выбрать тур</a>
+                        </div>
+                    </div>
+                    <div class="tour-card">
+                        <div class="tour-card__image"><img src="assets/img/c2.png" alt=""></div>
+                        <div class="tour-card__info">
+                            <h4 class="h4">Южный Дагестан – пятидневный тур</h4>
+                            <div class="tour-card__tags">
+                                <span class="tag">
+                                    <i><img src="assets/img/bank.svg" alt=""></i>
+                                    Архитектура
+                                </span>
+                                <span class="tag">
+                                    <i><img src="assets/img/emoji-happy.svg" alt=""></i>
+                                    Молодежный
+                                </span>
+                                <span class="tag">
+                                    <i><img src="assets/img/bank.svg" alt=""></i>
+                                    Архитектура
+                                </span>
+                                <span class="tag">
+                                    <i><img src="assets/img/emoji-happy.svg" alt=""></i>
+                                    Молодежный
+                                </span>
+                            </div>
+                            <div class="tour-card__descr">
+                                Южный Дагестан — это уникальный уголок России, где горные цепи встречаются с бескрайними просторами глубокой долины, а традиции сплетаются с современностью.
+                            </div>
+                            <div class="tour-card__price">
+                                от 39000 ₽/ чел.
+                            </div>
+                            <a href="" class="button button--black">Выбрать тур</a>
+                        </div>
+                    </div>
+                    <div class="tour-card">
+                        <div class="tour-card__image"><img src="assets/img/c2.png" alt=""></div>
+                        <div class="tour-card__info">
+                            <h4 class="h4">Южный Дагестан – пятидневный тур</h4>
+                            <div class="tour-card__tags">
+                                <span class="tag">
+                                    <i><img src="assets/img/bank.svg" alt=""></i>
+                                    Архитектура
+                                </span>
+                                <span class="tag">
+                                    <i><img src="assets/img/emoji-happy.svg" alt=""></i>
+                                    Молодежный
+                                </span>
+                                <span class="tag">
+                                    <i><img src="assets/img/bank.svg" alt=""></i>
+                                    Архитектура
+                                </span>
+                                <span class="tag">
+                                    <i><img src="assets/img/emoji-happy.svg" alt=""></i>
+                                    Молодежный
+                                </span>
+                            </div>
+                            <div class="tour-card__descr">
+                                Южный Дагестан — это уникальный уголок России, где горные цепи встречаются с бескрайними просторами глубокой долины, а традиции сплетаются с современностью.
+                            </div>
+                            <div class="tour-card__price">
+                                от 39000 ₽/ чел.
+                            </div>
+                            <a href="" class="button button--black">Выбрать тур</a>
+                        </div>
+                    </div>
+                    <div class="tour-card">
+                        <div class="tour-card__image"><img src="assets/img/c2.png" alt=""></div>
+                        <div class="tour-card__info">
+                            <h4 class="h4">Южный Дагестан – пятидневный тур</h4>
+                            <div class="tour-card__tags">
+                                <span class="tag">
+                                    <i><img src="assets/img/bank.svg" alt=""></i>
+                                    Архитектура
+                                </span>
+                                <span class="tag">
+                                    <i><img src="assets/img/emoji-happy.svg" alt=""></i>
+                                    Молодежный
+                                </span>
+                                <span class="tag">
+                                    <i><img src="assets/img/bank.svg" alt=""></i>
+                                    Архитектура
+                                </span>
+                                <span class="tag">
+                                    <i><img src="assets/img/emoji-happy.svg" alt=""></i>
+                                    Молодежный
+                                </span>
+                            </div>
+                            <div class="tour-card__descr">
+                                Южный Дагестан — это уникальный уголок России, где горные цепи встречаются с бескрайними просторами глубокой долины, а традиции сплетаются с современностью.
+                            </div>
+                            <div class="tour-card__price">
+                                от 39000 ₽/ чел.
+                            </div>
+                            <a href="" class="button button--black">Выбрать тур</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer class="footer">
         <div class="footer__upper">
             <div class="container">

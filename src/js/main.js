@@ -10,7 +10,7 @@ jQuery(function($){
 
   // Позиционируем карточки возле соответствующих пинов
   function positionCards(){
-    const wrapRect = $wrap[0].getBoundingClientRect();
+    if($wrap && $wrap[0]) {  const wrapRect = $wrap[0].getBoundingClientRect();}
     $('.map__card').each(function(){
       const key = $(this).data('key');
       const node = svg.querySelector('.pin[data-key="'+key+'"]');
@@ -101,6 +101,17 @@ jQuery(function($){
     arrows: true,
     dots: true
   });
+  $(document).ready(function() {
+    // Обработчик клика по заголовкам секций
+    $('.filter-header').on('click', function() {
+        $(this).parent().toggleClass('collapsed');
+    });
+
+    // Добавляем обработчики для чекбоксов
+    $('input[type="checkbox"]').on('change', function() {
+        console.log(`${this.id}: ${this.checked}`);
+    });
+});
 });
 
 // const gallerySwiper = new Swiper('.gallery__slider', {
