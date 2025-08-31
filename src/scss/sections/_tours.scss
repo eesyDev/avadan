@@ -37,7 +37,7 @@
 .tours__tabs {
     flex: 1;
     position: relative;
-    height: 600vh; /* Высота для скролла */
+    height: 500vh; /* Высота для скролла */
     padding: 40px;
 }
 
@@ -46,11 +46,11 @@
     position: sticky;
     top: 0px;
     width: 100%;
-    height: calc(100vh - 80px);
-    max-height: 600px;
+    // height: calc(100vh - 80px);
+    max-height: 500px;
     padding: 20px 34px;
     margin-bottom: 20px;
-    border-radius: 20px;
+    border-radius: 16px;
     background: var(--color-gray-100);
     box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -99,11 +99,19 @@
     flex-direction: column;
 }
 
-.tour__tab-info .text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #666;
-    margin-bottom: 2rem;
+.tour__tab-info .gallery {
+    display: flex;
+    gap: 12px;
+    img {
+        border-radius: 40px;
+        width: 30%;
+        margin-top: 24px;
+        height: 126px;
+        object-fit: cover;
+        &:nth-child(2) {
+            width: 40%;
+        }
+    }
 }
 
 
