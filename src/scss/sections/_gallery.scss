@@ -1,0 +1,49 @@
+.gallery {
+    margin-top: 70px;
+    &__title {
+        display: flex;
+        justify-content: center;
+    }
+    &__slider {
+        width: 100%;
+        height: 400px;
+        overflow: visible;
+        
+        .swiper-wrapper {
+            align-items: center;
+        }
+
+        .swiper-slide {
+            // width: 300px; // фиксированная ширина контейнера
+            // height: 250px; // фиксированная высота контейнера
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            overflow: hidden;
+
+            // Изображения внутри слайдов
+            img {
+            width: 100%;  // изображение занимает всю ширину контейнера
+            height: 100%; // изображение занимает всю высоту контейнера
+            object-fit: cover; // сохраняем пропорции, обрезаем лишнее
+            object-position: center; // центрируем изображение
+            }
+            
+            // Активный слайд
+            &.swiper-slide-active {
+            box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+            }
+
+            // Неактивные слайды
+            &:not(.swiper-slide-active) {
+            transform: scale(0.8);
+            opacity: 0.6;
+            z-index: 1;
+            }
+        }
+    }
+}

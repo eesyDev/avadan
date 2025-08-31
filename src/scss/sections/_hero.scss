@@ -1,5 +1,8 @@
 .hero {
     background-image: url('../img/hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     padding-top: 150px;
     min-height: 700px;
     color: #fff;
@@ -57,4 +60,132 @@
         margin-top: 24px;
     }
 
+}
+
+@media (max-width: 1399px) {
+    .h1 {
+        font-size: 65px;
+    }
+    .hero {
+        .labeled {
+            line-height: 70px;
+            .label--primary {
+                line-height: 0.9;
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .hero {
+        padding-top: 120px;
+        &__wrapper {
+            min-width: 85%;
+        }
+        &__tags {
+            .tag {
+                height: 34px;
+                padding: 0 12px;
+            }
+        }
+        & .button {
+            height: 48px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .hero {
+        &__wrapper {
+            max-width: 100%;
+            margin-bottom: 100px;
+            .h1 {
+                font-size: 60px;
+            }
+        }
+        .labeled {
+            .label--primary {
+                width: 285px;
+                bottom: -37px;
+                left: 65px;
+                padding: 10px 15px;
+                height: 48px;
+                gap: 10px;
+                font-size: 12px;
+            }
+        }
+    }
+
+
+    .advantages, .tours, .footer, .tourform {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        &__wrapper {
+            .h1 {
+                font-weight: 500;
+                font-size: 48px;
+            }
+        }
+        .labeled {
+            line-height: 50px;
+            height: 75px;
+            padding: 15px;
+            border-radius: 24px;
+            .label--primary {
+                width: 240px;
+                bottom: -23px;
+                left: 40px;
+                padding: 10px 10px;
+                height: 36px;
+                gap: 5px;
+                font-size: 10px;
+                i {
+                    width: 25px;
+                }
+            }
+        }
+        &__paragraph {
+            width: 80%;
+        }
+        &__tags {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 599px) {
+    .hero {
+        .h1 {
+            line-height: 1.5;
+            font-size: 50px;
+        }
+        .labeled {
+            .label--primary {
+                bottom: 55px;
+                left: 110px;
+                transform: rotate(-3deg);
+            }
+        }
+        &__paragraph {
+            width: 90%;
+        }
+        &__tags {
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        &__wrapper {
+            margin-top: 0;
+        }
+        &__tags {
+            width: 100%;
+        }
+    }
 }

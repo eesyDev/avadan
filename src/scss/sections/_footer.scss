@@ -1,0 +1,78 @@
+.footer {
+    &__upper {
+        padding: 40px 0 50px;
+        background: #2A67A4;
+        background-image: url('../img/subtract.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__navigation {
+        display: flex;
+        align-items: center;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 28px;
+            background: var(--color-gray-300);
+            padding: 6px 20px;
+            border-radius: 25px;
+            margin: 0 8px;
+            &:hover {
+                background: var(--color-gray-100);
+            }
+        }
+        button {
+            margin-left: 20px;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 55px;
+        width: fit-content;
+        a {
+            font-weight: 500;
+            font-size: 20px;
+            color: var(--color-white);
+            &:first-child {
+                margin-bottom: 8px;
+            }
+        }
+    }
+    &__bottom {
+        background: #30353A;
+        padding: 20px 0;
+        color: var(--color-white);
+        font-size: 10px;
+        font-weight: 300;
+    }
+    &__bottomwrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__copyright {
+        display: flex;
+        flex-direction: column;
+        a {
+            font-weight: 500;
+            text-decoration: underline;
+        }
+    }
+    &__terms {
+        a {
+            font-weight: 400;
+            margin-right: 35px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

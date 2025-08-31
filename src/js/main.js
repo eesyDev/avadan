@@ -91,3 +91,59 @@ jQuery(function($){
   startAutoplay();
 });
 
+// const gallerySwiper = new Swiper('.gallery__slider', {
+//   centeredSlides: true,
+//   slidesPerView: 3, // показываем 5 слайдов (1 активный + по 2 с каждой стороны)
+//   spaceBetween: 20,
+//   loop: true,
+
+//   navigation: {
+//     nextEl: '.gallery__slider .swiper-button-next',
+//     prevEl: '.gallery__slider .swiper-button-prev',
+//   },
+  
+  // breakpoints: {
+  //   320: {
+  //     slidesPerView: 1.5,
+  //     spaceBetween: 10
+  //   },
+  //   768: {
+  //     slidesPerView: 3,
+  //     spaceBetween: 15
+  //   },
+  //   1024: {
+  //     slidesPerView: 5,
+  //     spaceBetween: 20
+  //   }
+  // },
+  
+  // Кастомная анимация глубины БЕЗ прозрачности
+
+  // on: {
+  //   progress: function() {
+  //     for (let i = 0; i < this.slides.length; i += 1) {
+  //       const slide = this.slides[i];
+  //       const slideProgress = slide.progress;
+        
+  //       // Рассчитываем расстояние от центра (0 = центр)
+  //       const distance = Math.abs(slideProgress);
+        
+  //       // Масштаб: центральный = 1, боковые уменьшаются
+  //       const scale = Math.max(0.75, 1 - distance * 0.12);
+        
+  //       // Z-index для слоев
+  //       const zIndex = Math.max(1, 10 - Math.floor(distance * 3));
+        
+  //       // Применяем трансформации БЕЗ rotate и прозрачности
+  //       slide.style.transform = `scale(${scale})`;
+  //       slide.style.zIndex = zIndex;
+  //     }
+  //   },
+    
+  //   setTransition: function(speed) {
+  //     for (let i = 0; i < this.slides.length; i += 1) {
+  //       this.slides[i].style.transitionDuration = `${speed}ms`;
+  //     }
+  //   }
+  // }
+// });
