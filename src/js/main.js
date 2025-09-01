@@ -152,6 +152,42 @@ jQuery(function($){
           console.log(`${this.id}: ${this.checked}`);
       });
   });
+
+   // Переключение аккордеона
+   $('.faq-question').click(function() {
+    const $item = $(this).closest('.faq-item');
+    const $answer = $item.find('.faq-answer');
+    
+    if ($item.hasClass('active')) {
+        // Закрываем активный элемент
+        $answer.slideUp(300);
+        $item.removeClass('active');
+    } else {
+        // Закрываем все остальные элементы
+        $('.faq-item.active .faq-answer').slideUp(300);
+        $('.faq-item.active').removeClass('active');
+        
+        // Открываем выбранный элемент
+        $answer.slideDown(300);
+        $item.addClass('active');
+    }
+});
+
+    // Кнопка закрытия
+    $('.close-button').click(function() {
+        $(this).closest('.faq-container').fadeOut(300);
+    });
+
+    // Плавная анимация при загрузке
+    $('.faq-item').each(function(index) {
+        $(this).css({
+            'opacity': '0',
+            'transform': 'translateY(20px)'
+        }).delay(index * 100).animate({
+            'opacity': '1',
+            'transform': 'translateY(0)'
+        }, 500);
+    });
 });
 
 // const gallerySwiper = new Swiper('.gallery__slider', {
