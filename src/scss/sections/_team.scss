@@ -1,0 +1,91 @@
+.team {
+    .h2 {
+        text-align: center;
+    }
+    &__wrapper {
+        margin-top: 60px;
+    }
+    &-slider {
+        margin: 0 -52px;
+    }
+    &-card {
+        background-color: #fff;
+        box-shadow: 14px 24px 72px rgba(102, 102, 102, .1);
+        margin: 0 52px;
+        padding: 36px;
+        &__top {
+            display: flex;
+            gap: 24px;
+        }
+        &__img {
+            width: 152px;
+            height: 152px;
+        }
+        &__top-info {
+            width: calc(100% - 176px);
+        }
+        .name {
+            font-size: 16px;
+            font-weight: 600;
+            font-family: var(--font-family-alt);
+        }
+        .descr {
+            color: var(--color-gray-400);
+            margin-top: 20px;
+        }
+        .exp {
+            font-size: 18px;
+            color: var(--color-primary);
+            margin-top: 10px;
+        }
+        &__reviews {
+            margin-top: 30px;
+            position: relative;
+            &::before, &:after {
+                content: '';
+                position: absolute;
+                background-image: url('../img/icons/brackets.svg');
+                background-repeat: no-repeat;
+
+                width: 22px;
+                height: 20px;
+            }
+            &::before {
+                left: 0;top: 0;
+            }
+            &:after {
+                right: 0;top: -8px;
+                transform: rotate(180deg);
+            }
+            .slick-arrow {
+                width: 20px;
+                height: 20px;
+                border: 0;
+                top: 75%;
+            }
+            .slick-next {
+                background-size: 10px;
+            }
+            .slick-prev {
+                background-size: 10px;
+                background-image: url(../img/icons/arrow-next.svg);
+                transform: rotate(180deg) translateY(50%);
+                background-color: var(--color-primary);
+            }
+        }
+        .reviews-head {
+            font-size: 16px;
+            color: var(--color-gray-400);
+            text-align: center;
+        }
+        .review-name {
+            font-weight: 600;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .review-text {
+            margin-top: 8px;
+            text-align: center;
+        }
+    }
+}

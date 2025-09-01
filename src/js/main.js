@@ -119,6 +119,27 @@ jQuery(function($){
     arrows: true,
   });
 
+  $('.team-slider').slick({
+    centerMode: true,
+    centerPadding: '0',
+    slidesToShow: 2,  
+    infinite: true,
+    // dots: true,
+    arrows: true,
+  });
+
+  $('.team-reviews-slider').slick({
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    prevArrow: '<button class="slick-prev team-prev">❮</button>',
+    nextArrow: '<button class="slick-next team-next">❯</button>',
+});
+
 
   $(document).ready(function() {
       // Обработчик клика по заголовкам секций
