@@ -89,12 +89,59 @@ h3, .h3 {
     font-size: 24px;
     font-weight: 500;
     line-height: 1.22;
+    &-lg {
+        font-size: 32px;
+    }
 }
 
 h4, .h4 {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.22;
+}
+
+.slick-arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before {
+        display: none;
+    }
+}
+
+.slick-next {
+    background-color: var(--color-primary);
+    background-image: url('../img/icons/arrow-next.svg');
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center;
+    &:hover {
+        background-color: color-mix(in srgb, var(--color-primary) 90%, black 10%);
+        background-image: url('../img/icons/arrow-next.svg');
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-position: center;
+    }
+}
+.slick-prev {
+    border: 1px solid var(--color-gray-400);
+    background-image: url('../img/icons/arrow-prev.svg');
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center;
+    &:hover {
+        background-image: url('../img/icons/arrow-prev.svg');
+        background-repeat: no-repeat;
+        background-size: 16px;
+        background-position: center;
+    }
+}
+
+.slick-prev {
+    
 }
 
 .label {

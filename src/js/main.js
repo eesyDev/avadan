@@ -105,10 +105,18 @@ jQuery(function($){
   $('.director-slider').slick({
     centerMode: true,
     centerPadding: '0',
-    slidesToShow: 1,   // показываем 5 слайдов
+    slidesToShow: 1,  
     infinite: true,
     autoplay: true,
     dots: true
+  });
+  $('.invite__slider').slick({
+    centerMode: true,
+    centerPadding: '0',
+    slidesToShow: 1,  
+    infinite: true,
+    // dots: true,
+    arrows: true,
   });
 
 
