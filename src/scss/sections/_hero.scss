@@ -145,6 +145,64 @@
     }
 }
 
+.single-tour-hero {
+    background-image: url('../img/tour-s.png');
+    position: relative;
+    
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: rgba(24, 24, 24, 0.15);
+        z-index: 0;
+    }
+    .hero__wrapper {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .hero__paragraph {
+        width: 100%;
+    }
+    .single-tour-hero-form {
+        background-color: rgba(118, 118, 188, 0.3);
+        backdrop-filter: blur(8px);
+        margin: 50px auto 0;
+        width: fit-content;
+        border-radius: 15px;
+        padding: 24px;
+        &__wrapper {
+            display: flex;
+            gap: 20px;
+        }
+        select, input {
+            border-radius: 50px;
+            height: 40px;
+            width: 180px;
+            padding: 8px 16px;
+            padding-left: 32px;
+            background-color: rgba(173, 173, 173, .5);
+            border: 0;
+            &::placeholder {
+                color: #fff;
+            }
+        }
+        .button {
+            margin: 0;
+            height: 40px;
+        }
+        .form-descr {
+            font-size: 11px;
+            margin-bottom: 28px;
+            letter-spacing: 2%;
+            text-align: left;
+            max-width: 341px;
+        }
+    }
+}
+
 .about-hero {
     min-height: 630px;
     .hero__wrapper {
