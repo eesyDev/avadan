@@ -168,6 +168,21 @@ h4, .h4 {
     line-height: 32px;
 }
 
+.swiper {
+    overflow: hidden;
+}
+.swiper-button-prev {
+    &::after {
+        display: none;
+    }
+}
+
+.swiper-button-next {
+    &::after {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1199.99px) {
     .container {
         padding-left: 70px;

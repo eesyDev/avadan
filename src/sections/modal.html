@@ -1,0 +1,47 @@
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h2 class="modal-title">Оставьте заявку</h2>
+            <p class="modal-subtitle">Оставьте заявку и мы вышлем вам pdf-презентацию туров</p>
+        </div>
+        <div class="modal-body">
+            <form id="modalForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Ваше имя" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-input" placeholder="Номер телефона" name="phone" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <select class="form-select" name="region" required>
+                        <option value="">Выберите регион</option>
+                        <option value="moscow">Москва и МО</option>
+                        <option value="spb">Санкт-Петербург и ЛО</option>
+                        <option value="kazan">Казань и РТ</option>
+                        <option value="ekb">Екатеринбург и СО</option>
+                        <option value="nsk">Новосибирск и НСО</option>
+                        <option value="other">Другой регион</option>
+                    </select>
+                </div>
+
+                <div class="checkbox-wrapper">
+                    <div class="custom-checkbox">
+                        <input type="checkbox" id="agreement" name="agreement" required>
+                        <span class="checkmark"></span>
+                    </div>
+                    <label for="agreement" class="checkbox-text">
+                        Я даю согласие на обработку и использование предоставляемых мною данных
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    <span class="button-text">Отправить</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

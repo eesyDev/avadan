@@ -14,6 +14,8 @@
 @use 'invite';
 @use 'team';
 @use 'faq';
+@use 'modal';
+@use 'route';
 
 @media (max-width: 991px) {
     .footer {
