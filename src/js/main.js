@@ -108,6 +108,7 @@ jQuery(function($){
     slidesToShow: 1,  
     infinite: true,
     autoplay: true,
+    arrows: false,
     dots: true
   });
   $('.invite__slider').slick({
@@ -135,7 +136,7 @@ jQuery(function($){
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     prevArrow: '<button class="slick-prev team-prev">❮</button>',
     nextArrow: '<button class="slick-next team-next">❯</button>',
 });
