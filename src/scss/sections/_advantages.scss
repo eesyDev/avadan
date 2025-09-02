@@ -55,3 +55,96 @@
         top: 20px;
     }
 }
+
+.advantages {
+    margin-bottom: 100px;
+}
+
+@media (max-width: 1399px) {
+    .advantages {
+        &__wrapper {
+            gap: 30px;
+        }
+        &__card {
+            width: 30%;
+        }
+        .bg-el {
+            right: 0;
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .advantages {
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+        .bg-el {
+            z-index: -1;
+            opacity: .5;
+        }
+        &__card:last-child {
+            .bg {
+                svg path {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .advantages {
+        .bg-el {
+            top: 70px;
+            width: 140px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .advantages {
+        &__card {
+            flex: none;
+            width: 100%;
+            padding: 30px;
+            .bg {
+                svg path {
+                    display: none;
+                }
+            }
+            h3 {
+                margin-top: 20px;
+            }
+            p {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 599px) {
+    .advantages {
+        .bg-el {
+            top: 120px;
+            width: 120px;
+        }
+        &__card {
+            .icon {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .advantages {
+        &__card {
+            padding: 20px;
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}

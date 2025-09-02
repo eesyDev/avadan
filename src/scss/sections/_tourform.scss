@@ -49,31 +49,30 @@
     }
 }
 
-.sw-app-body  {
-    font-family: var(--font-family);
-    .sw-review-box {
-        background-color: initial !important;
-        border-radius: 15px !important;
-        &-right span {
-            background: var(--color-primary);
-            color: var(--color-white);
-            display: flex;
-            height: 40px;
-            padding: 8px 25px;
+@media (max-width: 991px) {
+    .tourform {
+        &__wrapper {
+            margin-top: 100px;
+            padding: 30px;
             text-align: center;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            border-radius: 20px;
-            width: -moz-fit-content;
-            box-shadow: none;
-            border: none;
+        }
+        &__inputs {
+            input {
+                width: 30%;
+            }
         }
     }
-    .sw-review-box-tabs {
-        .sw-review-box-tabs-body {
-            .sw-review-box-tab.active {
-                border-radius: 25px !important;
+}
+
+@media (max-width: 767px) {
+    .tourform {
+        &__inputs {
+            flex-direction: column;
+            align-items: center;
+            input {
+                width: 80%;
+                margin-bottom: 15px;
+                margin-right: 0;
             }
         }
     }

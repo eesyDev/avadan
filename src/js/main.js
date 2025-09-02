@@ -10,7 +10,7 @@ jQuery(function($){
 
   // Позиционируем карточки возле соответствующих пинов
   function positionCards(){
-    if($wrap && $wrap[0]) {  const wrapRect = $wrap[0].getBoundingClientRect();}
+    if($wrap && $wrap[0]) {  const wrapRect = $wrap[0].getBoundingClientRect();
     $('.map__card').each(function(){
       const key = $(this).data('key');
       const node = svg.querySelector('.pin[data-key="'+key+'"]');
@@ -21,6 +21,7 @@ jQuery(function($){
       // позиция сверху и немного левее центра пина
       $(this).css({ left: x+'px', top: y+'px' });
     });
+  }
   }
 
   function clearActive(){

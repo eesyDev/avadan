@@ -114,4 +114,45 @@
     }
 }
 
+@media (max-width: 1399px) {
+    .tours {
+        &__tabs {
+            .tour__tab {
+                &-heading h3 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .tours {
+        &__tabs {
+            .tour__tab {
+                &-heading {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .tours {
+        margin-top: 100px;
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__info {
+            h2 {
+                margin-bottom: 40px;
+            }
+        }
+        &__tabs {
+            display: none;
+        }
+    }
+}
+
 

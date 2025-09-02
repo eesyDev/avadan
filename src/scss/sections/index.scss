@@ -3,6 +3,7 @@
 @use 'advantages';
 @use 'map';
 @use 'tours';
+@use 'reviews';
 @use 'tourform';
 @use 'gallery';
 @use 'footer';
@@ -13,3 +14,9 @@
 @use 'invite';
 @use 'team';
 @use 'faq';
+
+@media (max-width: 991px) {
+    .footer {
+        display: none;
+    }
+}

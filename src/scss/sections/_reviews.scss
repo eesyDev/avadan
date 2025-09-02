@@ -1,0 +1,84 @@
+.sw-app-body  {
+    font-family: var(--font-family);
+    .sw-review-box {
+        background-color: initial !important;
+        border-radius: 15px !important;
+        &-right span {
+            background: var(--color-primary);
+            color: var(--color-white);
+            display: flex;
+            height: 40px;
+            padding: 8px 25px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 20px;
+            width: -moz-fit-content;
+            box-shadow: none;
+            border: none;
+        }
+    }
+    .sw-review-box-tabs {
+        .sw-review-box-tabs-body {
+            .sw-review-box-tab.active {
+                border-radius: 25px !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .sw-app-body  {
+        .sw-review-list {
+            &-body {
+                    grid-template-columns: repeat(2, minmax(100px, 1fr)) !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .sw-app-body  {
+        .sw-review-box {
+            &-left {
+                &-bottom {
+                    flex-direction: column !important;
+                    align-items: flex-start !important;
+                    width: 50% !important;
+                    .sw-review-item-stars, .sw-reviews-count {
+                        margin-left: 0 !important;
+                        margin-top: 5px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 599px) {
+    .sw-app-body  {
+        .sw-review-box {
+            &-tabs-body {
+                .sw-review-box-tab  {
+                    &-name {
+                        font-size: 14px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 475px) {
+    .sw-app-body  {
+        .sw-review-box {
+            &-bottom {
+                align-items: flex-start;
+            }
+            &-left {
+                padding-left: 10px;
+            }
+        }
+    }
+}

@@ -67,6 +67,14 @@
 .pin { cursor: pointer; }
 .pin.is-active circle:first-child { stroke: #1f75fe; }  /* обводка пина при активе */
 
+@media (max-width: 991px) {
+  .map {
+    &__card {
+      max-width: 380px;
+    }
+  }
+}
+
 /* На маленьких экранах карточки можно двигать ниже пина */
 @media (max-width: 768px) {
   .map__card { max-width: 260px; transform: translate(-50%, -90%) scale(.96); }
