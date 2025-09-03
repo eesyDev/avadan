@@ -14,9 +14,3 @@
 @use 'invite';
 @use 'team';
 @use 'faq';
-
-@media (max-width: 991px) {
-    .footer {
-        display: none;
-    }
-}

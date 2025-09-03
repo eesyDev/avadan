@@ -6,6 +6,7 @@
     overflow: hidden;
     width: 300px;
     flex: 1 1 33%;
+    height: fit-content;
 }
 
 .filter-section {
@@ -147,4 +148,11 @@
 .checkbox input:checked + .checkmark:hover {
     border-color: #dc3545;
     background: #c82333;
+}
+
+@media (max-width: 991px) {
+    .filter-container {
+        max-width: 100%;
+        width: 100%;
+    }
 }

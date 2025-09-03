@@ -64,7 +64,7 @@
 }
 .tours-hero {
     .hero__wrapper {
-        max-width: 70%;
+        max-width: 80%;
         margin: 60px auto 0;
         text-align: center;
     }
@@ -79,6 +79,8 @@
         margin-top: 86px;
         &-wrapper {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
             gap: 28px;
         }
         &-item { 
@@ -86,15 +88,18 @@
             flex-direction: column;
             gap: 10px;
             align-items: flex-start;
+            span {
+                margin-left: 10px;
+            }
         }
         select, input {
             border-radius: 50px;
             height: 48px;
-            width: 225px;
+            width: 245px;
             padding: 8px 16px;
             border: 1px solid var(--color-gray-300);
             padding-left: 32px;
-            
+            font-family: var(--font-family);
         }
         .date {
             display: flex;
@@ -120,6 +125,9 @@
             width: 74px;
             height: 74px;
             border-radius: 50%;
+        }
+        .submit-txt {
+            display: none;
         }
     }
     .type, .destination {
@@ -180,6 +188,16 @@
             }
         }
     }
+    .tours-hero {
+        &__filter {
+            &-wrapper {
+                gap: 15px;
+            }
+            select, input {
+                width: 195px;
+            }
+        }
+    }
 }
 
 @media (max-width: 1199px) {
@@ -196,6 +214,14 @@
         }
         & .button {
             height: 48px;
+        }
+    }
+    .tours-hero {
+        &__filter {
+            .submit-form {
+                width: 64px;
+                height: 64px;
+            }
         }
     }
 }
@@ -218,6 +244,16 @@
                 height: 48px;
                 gap: 10px;
                 font-size: 12px;
+            }
+        }
+    }
+    .tours-hero {
+        .hero__wrapper {
+            max-width: 100%;
+        }
+        &__filter {
+            select, input {
+                width: 175px;
             }
         }
     }
@@ -256,6 +292,58 @@
             width: 80%;
         }
     }
+    .tours-hero {
+        &__filter {
+            margin-top: 65px;
+            &-wrapper {
+                flex-wrap: wrap;
+            }
+            &-item {
+                width: 48%;
+                label {
+                    width: 100%;
+                    select, input {
+                        width: 100%;
+                    }
+                }
+            }
+            select, input {
+                width: 195px;
+            }
+            .submit-form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--color-white);
+                width: 48%;
+                height: 48px;
+                border-radius: 50px;
+                margin-top: 25px;
+                font-weight: 500;
+                font-size: 15px;
+                span {
+                    display: block;
+                }
+                svg {
+                    width: 22px;
+                    height: 22px;
+                    margin-left: 3px;
+                }
+            }
+        }
+    }
+    .about-hero {
+        .label {
+            width: 275px;
+            left: 45%;
+            bottom: -15px;
+            font-size: 11px;
+            transform: rotate(-2deg);
+            i {
+                width: 25px;
+            }
+        }
+    }
 }
 
 @media (max-width: 599px) {
@@ -276,6 +364,28 @@
         }
         &__tags {
             width: 90%;
+        }
+    }
+    .tours-hero {
+        &__filter {
+            &-item {
+                gap: 5px;
+                span {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .about-hero {
+        .label {
+            width: 255px;
+            left: 38%;
+            bottom: -10px;
+            font-size: 10px;
+            height: 28px;
+            i {
+                line-height: 10px;
+            }
         }
     }
 }
@@ -311,6 +421,47 @@
         }
         &__paragraph {
             font-size: 15px;
+        }
+    }
+    .tours-hero {
+        &__filter {
+            margin-top: 50px;
+            &-item {
+                width: 100%;
+            }
+            &-wrapper {
+                justify-content: center;
+            }
+            .submit-form {
+                width: 70%;
+            }
+        }
+    }
+    .about-hero {
+        .h1 {
+            font-size: 38px;
+        }
+        .label {
+            width: 245px;
+            left: 25%;
+            font-size: 9px;
+            height: 25px;
+            i {
+                width: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .about-hero {
+        .h1 {
+            font-size: 32px;
+        }
+        .label {
+            left: 15%;
+            transform: rotate(-1deg);
+            bottom: 32px;
         }
     }
 }

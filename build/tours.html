@@ -99,6 +99,7 @@
                                 </label>
                             </div>
                             <button type="submit" class="submit-form">
+                                <span class="submit-txt">Найти</span>
                                 <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_124_490)">
                                     <path d="M21.9583 19.8333H20.8392L20.4425 19.4508C21.8308 17.8358 22.6667 15.7392 22.6667 13.4583C22.6667 8.3725 18.5442 4.25 13.4583 4.25C8.3725 4.25 4.25 8.3725 4.25 13.4583C4.25 18.5442 8.3725 22.6667 13.4583 22.6667C15.7392 22.6667 17.8358 21.8308 19.4508 20.4425L19.8333 20.8392V21.9583L26.9167 29.0275L29.0275 26.9167L21.9583 19.8333ZM13.4583 19.8333C9.93083 19.8333 7.08333 16.9858 7.08333 13.4583C7.08333 9.93083 9.93083 7.08333 13.4583 7.08333C16.9858 7.08333 19.8333 9.93083 19.8333 13.4583C19.8333 16.9858 16.9858 19.8333 13.4583 19.8333Z" fill="white"/>
@@ -117,10 +118,10 @@
             
         </div>
     </div>
-    <div class="spacer spacer--120"></div>
-    <section class="tours">
+    <div class="spacer spacer--120 spacer--80-md spacer-40-sm"></div>
+    <section class="tours-page">
         <div class="container">
-            <div class="tours__wrapper">
+            <div class="tours-page__wrapper">
                 <div class="filter-container">
                     <!-- Виды отдыха -->
                     <div class="filter-section">
@@ -270,7 +271,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tours__inner">
+                <div class="tours-page__inner">
                     <div class="tour-card">
                         <div class="tour-card__image"><img src="assets/img/c2.png" alt=""></div>
                         <div class="tour-card__info">
@@ -433,29 +434,31 @@
     <footer class="footer">
         <div class="footer__upper">
             <div class="container">
-                <div class="footer__nav">
-                    <a href="" class="footer__logo">
-                        <img src="assets/img/logo_white-text.png" alt="logo" class="">
-                    </a>
-                    <nav class="footer__navigation">
-                        <a href="">Туры</a>
-                        <a href="">О компании</a>
-                        <a href="">Сотрудничество</a>
-                        <a href="">Контакты</a>
-                        <button class="button button--primary">
-                            Оставьте заявку
-                            <i class="icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15.6534 14.0696C15.5638 13.98 15.5072 13.8575 15.5072 13.7161L15.5072 8.4929L10.2841 8.4929C10.0107 8.4929 9.78439 8.26662 9.78439 7.99321C9.78439 7.71979 10.0107 7.49352 10.2841 7.49352L16.0069 7.49352C16.2803 7.49352 16.5066 7.71979 16.5066 7.99321L16.5066 13.7161C16.5066 13.9895 16.2803 14.2157 16.0069 14.2157C15.8702 14.2205 15.7429 14.1592 15.6534 14.0696Z" fill="white"/>
-                                <path d="M7.63947 16.3606C7.44619 16.1674 7.44619 15.8468 7.63947 15.6535L15.5732 7.71979C15.7665 7.52652 16.087 7.52652 16.2803 7.71979C16.4736 7.91307 16.4736 8.23363 16.2803 8.4269L8.34657 16.3606C8.1533 16.5539 7.83274 16.5539 7.63947 16.3606Z" fill="white"/>
-                                </svg>
-                            </i>
-                        </button>
-                    </nav>
-                </div>
-                <div class="footer__info">
-                    <a href="/">+7 (967) 409-08-08</a>
-                    <a href="/">info@adavantravel.ru</a>
+                <div class="footer__upperwrap">
+                    <div class="footer__nav">
+                        <a href="" class="footer__logo">
+                            <img src="assets/img/logo_white-text.png" alt="logo" class="">
+                        </a>
+                        <nav class="footer__navigation">
+                            <a href="">Туры</a>
+                            <a href="">О компании</a>
+                            <a href="">Сотрудничество</a>
+                            <a href="">Контакты</a>
+                            <button class="button button--primary">
+                                Оставьте заявку
+                                <i class="icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.6534 14.0696C15.5638 13.98 15.5072 13.8575 15.5072 13.7161L15.5072 8.4929L10.2841 8.4929C10.0107 8.4929 9.78439 8.26662 9.78439 7.99321C9.78439 7.71979 10.0107 7.49352 10.2841 7.49352L16.0069 7.49352C16.2803 7.49352 16.5066 7.71979 16.5066 7.99321L16.5066 13.7161C16.5066 13.9895 16.2803 14.2157 16.0069 14.2157C15.8702 14.2205 15.7429 14.1592 15.6534 14.0696Z" fill="white"/>
+                                    <path d="M7.63947 16.3606C7.44619 16.1674 7.44619 15.8468 7.63947 15.6535L15.5732 7.71979C15.7665 7.52652 16.087 7.52652 16.2803 7.71979C16.4736 7.91307 16.4736 8.23363 16.2803 8.4269L8.34657 16.3606C8.1533 16.5539 7.83274 16.5539 7.63947 16.3606Z" fill="white"/>
+                                    </svg>
+                                </i>
+                            </button>
+                        </nav>
+                    </div>
+                    <div class="footer__info">
+                        <a href="/">+7 (967) 409-08-08</a>
+                        <a href="/">info@avadantravel.ru</a>
+                    </div>
                 </div>
             </div>
         </div>

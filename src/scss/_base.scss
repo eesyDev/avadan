@@ -20,6 +20,18 @@ html, body {
     &--200   { height: 200px }
 }
 
+@media screen and (max-width: 991px) {
+    .spacer--120 {
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .spacer--120 {
+        height: 60px;
+    }
+}
+
 body {
     font-family: var(--font-family);
     font-size: 14px;
@@ -204,5 +216,11 @@ h4, .h4 {
     }
     h3, .h3 {
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2, .h2 {
+        font-size: 28px;
     }
 }
