@@ -74,10 +74,10 @@
     .sw-app-body  {
         .sw-review-box {
             &-bottom {
-                align-items: flex-start;
+                align-items: flex-start !important;
             }
             &-left {
-                padding-left: 10px;
+                padding-left: 10px !important;
             }
         }
     }

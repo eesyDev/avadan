@@ -1,4 +1,4 @@
-.tours {
+.tours-page {
     &__wrapper {
         display: flex;
         gap: 32px;
@@ -7,6 +7,31 @@
         flex: 1 1 calc(67% - 32px);
         display: flex;
         flex-wrap: wrap;
-        gap: 34px;
+        column-gap: 3%;
+        row-gap: 34px;
+    }
+}
+
+@media (max-width: 1399px) {
+    .tours-page {
+        &__inner {
+            row-gap: 26px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .tours-page {
+        &__wrapper {
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 599px) {
+    .tours-page {
+        &__inner {
+            row-gap: 20px;
+        }
     }
 }

@@ -75,5 +75,29 @@
                 margin-right: 0;
             }
         }
+        label {
+            text-align: left;
+            input {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 599px) {
+    .tourform {
+        &__inputs {
+            input {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .tourform {
+        &__wrapper {
+            padding: 30px 20px;
+        }
     }
 }
