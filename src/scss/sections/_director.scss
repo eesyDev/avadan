@@ -18,10 +18,12 @@
     }
     &__photo {
         width: 25%;
+        height: 380px;
         img {
             width: 100%;
             height: 100%;
             border-radius: 8px;
+            object-fit: cover;
         }
     }
     &__right {
@@ -45,5 +47,88 @@
     }
     &__words-slider {
         background-color: #fff;
+    }
+}
+
+@media (max-width: 1399px) {
+    .director {
+        &__left {
+            .h2 {
+                font-size: 42px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .director {
+        &__wrapper {
+            justify-content: space-between;
+        }
+        &__left {
+            width: 34%;
+            margin-right: 2%;
+            .h2 {
+                font-size: 36px;
+            }
+        }
+        &__photo {
+            width: 24%;
+        }
+        &__right {
+            width: 40%;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .director {
+        &__wrapper {
+            position: relative;
+            justify-content: start;
+        }
+        &__left {
+            width: 40%;
+            .h2 {
+                font-size: 30px;
+            }
+        }
+        &__photo {
+            width: 30%;
+            margin-right: 20%;
+            height: 320px;
+        }
+        &__right {
+            position: absolute;
+            font-size: 10px;
+            padding: 25px 20px 10px;
+            right: 0;
+            bottom: -10px;
+            width: 50%;
+        }
+        .emogi {
+            width: 110px;
+            bottom: -60px;
+        }
+    }
+
+    .team {
+        display: none; // DELETE AFTER FINISH DELETE AFTER FINISH DELETE AFTER FINISH
+    }
+}
+
+@media (max-width: 767px) {
+    .director {
+        &__left {
+            
+        }
+        &__photo {
+            width: 20%;
+            height: 340px;
+        }
+        &__right {
+            font-size: 12px;
+            padding: 27px 30px 10px;
+        }
     }
 }
