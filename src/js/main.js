@@ -91,7 +91,47 @@ jQuery(function($){
   showByKey(keys[0]);  // начальный показ первой карточки
   startAutoplay();
 
+  $(document).ready(function() {
+    // Открытие модального окна
+    $('.openModal').click(function() {
+        $('#modalOverlay').addClass('active');
+        $('body').css('overflow', 'hidden'); // блокируем скролл
+    });
 
+    // Закрытие модального окна
+    function closeModal() {
+        $('#modalOverlay').removeClass('active');
+        $('body').css('overflow', 'auto'); // возвращаем скролл
+    }
+
+    // Закрытие по крестику
+    $('#closeModal').click(closeModal);
+
+    // Закрытие по клику на оверлей
+    $('#modalOverlay').click(function(e) {
+        if (e.target === this) {
+            closeModal();
+        }
+    });
+
+    // Закрытие по Escape
+    $(document).keyup(function(e) {
+        if (e.keyCode === 27 && $('#modalOverlay').hasClass('active')) {
+            closeModal();
+        }
+    });
+
+    // Маска для телефона (простая)
+    $('input[name="phone"]').on('input', function() {
+        let value = this.value.replace(/\D/g, '');
+        if (value.length > 0) {
+            if (value.length <= 10) {
+                value = value.replace(/(\d{3})(\d{3})(\d{4})/, '+7 ($1) $2-$3');
+            }
+        }
+        this.value = value;
+    });
+});
    
 
   $('.gallery-slider').slick({
@@ -190,6 +230,45 @@ jQuery(function($){
             'transform': 'translateY(0)'
         }, 500);
     });
+
+
+    try {
+    const routeSliders = document.querySelectorAll('.route-slider');
+    
+    routeSliders.forEach(function(slider, index) {
+        new Swiper(slider, {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            // autoplay: {
+            //     delay: 5000,
+            //     disableOnInteraction: false,
+            // },
+            
+            // Навигация привязывается к текущему слайдеру
+            navigation: {
+                nextEl: slider.querySelector('.swiper-button-next'),
+                prevEl: slider.querySelector('.swiper-button-prev'),
+            },
+            
+            // pagination: {
+            //     el: slider.querySelector('.swiper-pagination'),
+            //     clickable: true,
+            // },
+            
+            // breakpoints: {
+            //     768: {
+            //         slidesPerView: 2,
+            //     },
+            //     1024: {
+            //         slidesPerView: 3,
+            //     }
+            // }
+        });
+    });
+    } catch(err) {
+      console.log(err)
+    }
 });
 
 // const gallerySwiper = new Swiper('.gallery__slider', {

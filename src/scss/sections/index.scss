@@ -14,3 +14,15 @@
 @use 'invite';
 @use 'team';
 @use 'faq';
+@use 'modal';
+@use 'route';
+@use 'presentation';
+@use 'why-us';
+@use 'price';
+@use 'thanks';
+
+@media (max-width: 991px) {
+    .footer {
+        display: none;
+    }
+}

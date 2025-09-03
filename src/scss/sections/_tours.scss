@@ -13,6 +13,12 @@
     display: flex;
     align-items: flex-start;
 }
+.plane {
+    position: fixed;
+    left: 77%;
+    top: 30px;
+    width: 307px;
+}
 .tours__info {
     flex: 0 0 45%;
     position: sticky;
