@@ -5,8 +5,10 @@
 }
 
 html, body {
-    overflow-x: hidden;
     position: relative;
+    @media screen and (max-width: 991px) {
+        overflow-x: hidden;
+    }
     &.no-scroll {
         overflow: hidden;
         position: fixed;
