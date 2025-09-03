@@ -1,0 +1,43 @@
+.why {
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 40px;
+    }
+    .h2 {
+        max-width: 616px;
+    }
+    .sub {
+        margin-top: 20px;
+        max-width: 616px;
+    }
+    &__item {
+        flex: 1 1 calc(25% - 24px); // 4 в ряд на десктопе
+        min-width: 280px;
+        background: #f8f9fa;
+        padding: 30px;
+        border-radius: 12px;
+        &-heading {
+            display: flex;
+            gap: 20px;
+            .title {
+                font-weight: 500;
+            }
+            .icon {
+                width: 42px;
+                height: 42px;
+            }
+        }
+        
+        // Для второго ряда - 3 элемента
+        &:nth-child(n+5) {
+            flex: 1 1 calc(33.333% - 20px); // 3 в ряд
+        }
+        &-text {
+            font-size: 12px;
+            margin-top: 18px;
+        }
+
+    }
+}

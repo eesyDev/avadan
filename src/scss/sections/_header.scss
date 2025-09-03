@@ -45,6 +45,13 @@
     }
 }
 
+.thanks .header {
+    position: static;
+    background-image: url('../img/bg-header.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 @media (max-width: 1350px) {
     .header {
         &__menu {

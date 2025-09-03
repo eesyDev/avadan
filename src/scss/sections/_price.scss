@@ -1,0 +1,75 @@
+.price {
+    &__wrapper {
+        display: flex;
+        gap: 50px;
+        margin-top: 10px;
+    }
+    &__list {
+        display: flex;
+        color: var(--color-gray-400);
+        gap: 14px;
+        &-inner {
+            width: calc(100% - 99px);
+        }
+        &-ill {
+            width: 83px;
+        }
+        &-title {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        ul {
+            margin-bottom: 25px;
+        }
+        li {
+            padding-left: 26px;
+            position: relative;
+            margin-top: 5px;
+            &::before {
+                content: '';
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                background-color: #B2C5C9;
+                left: 3px;
+                top: 5px;
+                position: absolute;
+                display: inline-block;
+
+            }
+        }
+    }
+    &__card {
+        background-color: #F8F8F8;
+        max-width: 416px;
+        padding: 35px 42px;
+        border-radius: 15px;
+        position: relative;
+        &-price {
+            font-size: 40px;
+            font-weight: 700;
+            span {
+                font-size: 24px;
+
+            }
+        }
+        &-info {
+            margin-top: 20px;
+            font-size: 12px;
+        }
+        .button {
+            margin-top: 20px;
+        }
+        .label {
+            height: 29px;
+            position: absolute;
+            padding: 0 20px;
+            min-width: 166px;
+            top: 30px;
+            transform: rotate(8deg);
+            left: 68%;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+    }
+}
