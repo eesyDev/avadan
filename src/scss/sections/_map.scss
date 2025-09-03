@@ -67,11 +67,16 @@
 .pin { cursor: pointer; }
 .pin.is-active circle:first-child { stroke: #1f75fe; }  /* обводка пина при активе */
 
+.map__mobile {
+  display: none;
+}
+
 @media (max-width: 991px) {
   .map {
     &__card {
       max-width: 380px;
     }
+
   }
 }
 
@@ -79,4 +84,34 @@
 @media (max-width: 768px) {
   .map__card { max-width: 260px; transform: translate(-50%, -90%) scale(.96); }
   .map__card.is-visible { transform: translate(-50%, -100%) scale(1); }
+  .map__wrapper {
+    display: none;
+  }
+  .map__mobile {
+    display: block;
+    .map__card-mobile {
+      max-width: 330px;
+      padding: 12px;
+      padding-bottom: 24px;
+      box-shadow: 0 7px 15px rgba(192, 188, 161, 0.22);
+      border-radius: 16px;
+      background-color: var(--color-white);
+      height: auto;
+  }
+  .map__tours-wrapper {
+    position: relative;
+    padding: 10px 0;
+  }
+  .map__card-title {
+    font-size: 16px;
+  }
+  .map__card-text {
+    font-size: 12px;
+  }
+  .map__card-link {
+    height: auto;
+    font-size: 12px;
+    padding: 8px 12px;
+}
+}
 }
