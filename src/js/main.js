@@ -269,6 +269,15 @@ jQuery(function($){
     } catch(err) {
       console.log(err)
     }
+
+    var burger = $('.burger');
+      var  slideMenu = $('.header__menu-nav');
+
+    burger.click(function() {
+        burger.toggleClass('open');
+        slideMenu.toggleClass('active');
+        $('body').toggleClass('no-scroll');
+    });
 });
 
 // const gallerySwiper = new Swiper('.gallery__slider', {

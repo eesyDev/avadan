@@ -5,7 +5,13 @@
 }
 
 html, body {
-    // overflow-x: hidden;
+    overflow-x: hidden;
+    position: relative;
+    &.no-scroll {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+    }
   }
 
 // === SPACING ===
