@@ -271,7 +271,6 @@ jQuery(function($){
       breakpoints: {
         991: {
           slidesPerView: 2,
-          spaceBetween: 15
         },
       },
   })
@@ -285,7 +284,7 @@ jQuery(function($){
       new Swiper(slider, {
         slidesPerView: 1,
         spaceBetween: 10,
-        loop: true,
+        // loop: true,
 
         navigation: {
           nextEl: slider.querySelector('.swiper-button-next.reviews'),
