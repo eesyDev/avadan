@@ -59,6 +59,7 @@
 @media (max-width: 599px) {
     .sw-app-body  {
         .sw-review-box {
+            align-items: flex-start !important;
             &-tabs-body {
                 .sw-review-box-tab  {
                     &-name {
@@ -70,7 +71,7 @@
     }
 }
 
-@media (max-width: 475px) {
+@media (max-width: 480px) {
     .sw-app-body  {
         .sw-review-box {
             &-bottom {

@@ -123,7 +123,19 @@
     transform: rotate(90deg);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1199px) {
+    .faq {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 991px) {
+    .faq {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
     .faq-container {
         padding: 40px 30px;
     }
@@ -144,6 +156,8 @@
 
     .faq-answer {
         padding: 0 0 30px 80px;
+        font-size: 14px;
+        line-height: 1.4;
     }
 }
 
@@ -172,5 +186,9 @@
         width: 35px;
         height: 35px;
         font-size: 20px;
+    }
+
+    .faq-title {
+        margin-bottom: 10px;
     }
 }

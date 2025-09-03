@@ -111,24 +111,64 @@
             bottom: -60px;
         }
     }
-
-    .team {
-        display: none; // DELETE AFTER FINISH DELETE AFTER FINISH DELETE AFTER FINISH
-    }
 }
 
 @media (max-width: 767px) {
     .director {
+        &__wrapper {
+            flex-direction: column;
+        }
         &__left {
-            
+            width: 100%;
+            margin-right: 0;
+            .h2 {
+                margin-top: 5px;
+            }
+            .sm {
+                margin-top: 20px;
+            }
         }
         &__photo {
-            width: 20%;
-            height: 340px;
+            width: 25%;
+            margin-right: 0;
+            height: 260px;
         }
         &__right {
-            font-size: 12px;
-            padding: 27px 30px 10px;
+            width: 70%;
+            margin-left: 0;
+            margin-top: 0;
+            right: 50px;
+            bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 599px) {
+    .director {
+        &__photo {
+            width: 35%;
+        }
+        &__right {
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .director {
+        &__photo {
+            width: 50%;
+        }
+        &__right {
+            width: 90%;
+            right: 0;
+            bottom: 20px;
+            padding: 15px 15px 0px;
+            font-size: 9px;
+        }
+        .emogi {
+            width: 80px;
+            bottom: -50px;
         }
     }
 }
