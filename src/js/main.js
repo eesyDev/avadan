@@ -127,6 +127,45 @@ jQuery(function($){
 
     }
   }
+
+  $(document).ready(function() {
+    function initMobileAccordion() {
+        if ($(window).width() <= 991) {
+            // Открываем первый таб по умолчанию
+            $('.tour__tab').first().find('.tour__tab-heading').addClass('active');
+            $('.tour__tab').first().find('.tour__tab-info').addClass('active');
+            
+            // Простой обработчик клика
+            $('.tour__tab-heading').on('click', function() {
+                const $heading = $(this);
+                console.log('click')
+                const $info = $heading.siblings('.tour__tab-info');
+                const isActive = $heading.hasClass('active');
+                
+                // Закрываем все остальные
+                $('.tour__tab-heading').removeClass('active');
+                $('.tour__tab-info').removeClass('active');
+                
+                // Если текущий не был активен - открываем его
+                if (!isActive) {
+                    $heading.addClass('active');
+                    $info.addClass('active');
+                }
+            });
+        } else {
+            // Убираем мобильные классы
+            $('.tour__tab-heading').removeClass('active');
+            $('.tour__tab-info').removeClass('active');
+        }
+    }
+    
+    initMobileAccordion();
+    
+    $(window).on('resize', function() {
+        initMobileAccordion();
+    });
+});
+
   $(document).ready(function() {
     // Открытие модального окна
     $('.openModal').click(function() {
