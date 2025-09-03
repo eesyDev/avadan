@@ -20,9 +20,3 @@
 @use 'why-us';
 @use 'price';
 @use 'thanks';
-
-@media (max-width: 991px) {
-    .footer {
-        display: none;
-    }
-}
