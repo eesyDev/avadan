@@ -43,6 +43,56 @@
             border-radius: 50%;
         }
     }
+    .burger {
+        width: 20px;
+        position: relative;
+        height: 20px;
+        margin-left: 10px;
+    }
+    .burger .bottom-line,
+    .burger .middle-line,
+    .burger .top-line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+    }
+    
+    .burger .top-line {
+        top: 0px;
+        transition: all .2s ease-in-out
+    }
+    
+    .burger .middle-line {
+        top: 8px;
+        transition: all .2s ease-in-out
+    }
+    
+    .burger .bottom-line {
+        top: 16px;
+        transition: all .2s ease-in-out
+    }
+    
+    .open .top-line {
+        transform: translate3d(0, 5px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(45deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+        transition: all .3s ease-in-out
+    }
+    
+    .open .middle-line {
+        opacity: 0
+    }
+    
+    .open .bottom-line {
+        transition: all .3s ease-in-out;
+        transform: translate3d(0, -10.5px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-45deg) skew(0deg, 0deg);
+        transform-style: preserve-3d
+    }
+    .burger {
+        display: none;
+    }
 }
 
 .thanks .header {
@@ -108,6 +158,32 @@
 
 @media (max-width: 991px) {
     .header {
-        display: none;
+        padding: 15px 0;
+        .container {
+            overflow-x: hidden;
+        }
+        &__menu-nav {
+            position: absolute;
+            background-color: #fff;
+            flex-direction: column;
+            width: 100%;
+            padding: 30px;
+            height: 100vh;
+            top: 70px;
+            right: -100%;
+            transition: all .4s cubic-bezier(.8, .1, .01, .04);
+            border-radius: 0px;
+            align-items: flex-start;
+            &.active {
+                right: 0;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+        }
+        
+        .burger {
+            display: block;
+        }
     }
 }
