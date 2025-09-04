@@ -29,8 +29,8 @@
     background: #fff;
     .plane {
         position: absolute;
-        left: 170%;
-        top: -140px;
+        left: 180%;
+        top: -130px;
         width: 307px;
         z-index: 10;
     }
@@ -171,6 +171,7 @@
 @media (max-width: 991px) {
     .tours {
         margin-top: 100px;
+        padding-bottom: 40px;
         &__wrapper {
             flex-direction: column;
         }
@@ -207,6 +208,7 @@
                     align-items: center;
                     justify-content: space-between;
                     position: relative;
+                    padding-right: 30px;
                     
                     &:hover {
                         background: #f8f9fa;
@@ -215,8 +217,6 @@
                     &.active {
                         background: #dfdfdf;
                     }
-                    
-                    // Добавляем стрелку через псевдоэлемент
                     &::after {
                         content: "▼";
                         font-size: 16px;
@@ -224,6 +224,9 @@
                         transition: transform 0.3s ease;
                         flex-shrink: 0;
                         margin-left: 15px;
+                        position: absolute;
+                        right: 20px;
+                        top: 30px;
                     }
                     
                     &.active::after {
@@ -254,7 +257,7 @@
                     padding: 0 20px;
                     
                     &.active {
-                        max-height: 600px; // Увеличил для надежности
+                        max-height: 600px;
                         padding: 0 20px 20px 20px;
                     }
                     

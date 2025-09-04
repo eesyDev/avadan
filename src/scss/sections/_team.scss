@@ -4,6 +4,7 @@
     }
     &__wrapper {
         margin-top: 60px;
+        position: relative;
     }
     &-slider {
         padding: 90px 60px; // размер тени + запас
@@ -103,5 +104,47 @@
     }
     .team-card-button {
         margin: 30px auto 0;
+    }
+
+    .team-reviews-slider {
+        .swiper-button-prev {
+            background-color: var(--color-primary);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 0;
+            img {
+                transform: rotate(-180deg);
+                width: 12px;
+            }
+        }
+        
+        .swiper-button-next {
+            background-color: var(--color-primary);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            img {
+                width: 12px;
+            }
+        }
+    }
+
+    .swiper-button-prev-team {
+        border: 1px solid var(--color-gray-400);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        top: 100%;
+        left: 46%;
+    }
+    
+    .swiper-button-next-team {
+        background-color: var(--color-primary);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        top: 100%;
+        right: 46%;
     }
 }
