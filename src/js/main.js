@@ -106,16 +106,10 @@ jQuery(function($){
               delay: 4000,
               disableOnInteraction: true,
           },
-
-          // navigation: {
-          //   nextEl: '.gallery__slider .swiper-button-next',
-          //   prevEl: '.gallery__slider .swiper-button-prev',
-          // },
           
           breakpoints: {
             480: {
               slidesPerView: 2,
-              // spaceBetween: 15
             },
             768: {
               slidesPerView: 3,
@@ -124,7 +118,7 @@ jQuery(function($){
           },
       })
     } catch(err) {
-
+      console.log(err)
     }
   }
 
@@ -135,18 +129,15 @@ jQuery(function($){
             $('.tour__tab').first().find('.tour__tab-heading').addClass('active');
             $('.tour__tab').first().find('.tour__tab-info').addClass('active');
             
-            // Простой обработчик клика
             $('.tour__tab-heading').on('click', function() {
                 const $heading = $(this);
                 console.log('click')
                 const $info = $heading.siblings('.tour__tab-info');
                 const isActive = $heading.hasClass('active');
                 
-                // Закрываем все остальные
                 $('.tour__tab-heading').removeClass('active');
                 $('.tour__tab-info').removeClass('active');
                 
-                // Если текущий не был активен - открываем его
                 if (!isActive) {
                     $heading.addClass('active');
                     $info.addClass('active');
@@ -173,7 +164,6 @@ jQuery(function($){
         $('body').css('overflow', 'hidden'); // блокируем скролл
     });
 
-    // Закрытие модального окна
     function closeModal() {
         $('#modalOverlay').removeClass('active');
         $('body').css('overflow', 'auto'); // возвращаем скролл
@@ -211,12 +201,36 @@ jQuery(function($){
 
   $('.gallery-slider').slick({
     centerMode: true,
-    centerPadding: '0',
-    slidesToShow: 5,   // показываем 5 слайдов
+    centerPadding: '0px',
+    slidesToShow: 5,
+    slidesToScroll: 1,
     infinite: true,
+    focusOnSelect: true,
     arrows: true,
-    dots: true
-  });
+    dots: true,
+    prevArrow: '<button type="button" class="slick-prev gallery-prev"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2"/></svg></button>',
+    nextArrow: '<button type="button" class="slick-next gallery-next"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2"/></svg></button>',
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
+});
 
   $('.director-slider').slick({
     centerMode: true,
@@ -240,29 +254,48 @@ jQuery(function($){
       }
     });
   } catch(err) {
-
+    console.log(err)
   }
 
-  $('.team-slider').slick({
-    centerMode: true,
-    centerPadding: '0',
-    slidesToShow: 2,  
-    infinite: true,
-    // dots: true,
-    arrows: true,
-  });
+  try {
+    const teamSwiper = new Swiper('.team-slider', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
 
-  $('.team-reviews-slider').slick({
-    dots: true,
-    arrows: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    adaptiveHeight: false,
-    prevArrow: '<button class="slick-prev team-prev">❮</button>',
-    nextArrow: '<button class="slick-next team-next">❯</button>',
-});
+      navigation: {
+        nextEl: '.team__wrapper .swiper-button-next-team',
+        prevEl: '.team__wrapper .swiper-button-prev-team',
+      },
+      
+      breakpoints: {
+        991: {
+          slidesPerView: 2,
+          spaceBetween: 15
+        },
+      },
+  })
+  } catch(err) {
+    console.log(err)
+  }
+
+  try{
+    const teamCardSwiper = document.querySelectorAll('.team-reviews-slider');
+    teamCardSwiper.forEach(function(slider, index) {
+      new Swiper(slider, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+
+        navigation: {
+          nextEl: slider.querySelector('.swiper-button-next.reviews'),
+          prevEl: slider.querySelector('.swiper-button-prev.reviews'),
+        },
+    })
+  })
+  } catch(err) {
+    console.log(err)
+  }
 
 
   $(document).ready(function() {
@@ -295,7 +328,7 @@ jQuery(function($){
         $answer.slideDown(300);
         $item.addClass('active');
     }
-});
+    });
 
     // Кнопка закрытия
     $('.close-button').click(function() {
@@ -322,11 +355,6 @@ jQuery(function($){
             slidesPerView: 1,
             spaceBetween: 20,
             loop: true,
-            // autoplay: {
-            //     delay: 5000,
-            //     disableOnInteraction: false,
-            // },
-            
             // Навигация привязывается к текущему слайдеру
             navigation: {
                 nextEl: slider.querySelector('.swiper-button-next'),
@@ -361,34 +389,3 @@ jQuery(function($){
         $('body').toggleClass('no-scroll');
     });
 });
-
-// const gallerySwiper = new Swiper('.gallery__slider', {
-//   centeredSlides: true,
-//   slidesPerView: 3, // показываем 5 слайдов (1 активный + по 2 с каждой стороны)
-//   spaceBetween: -150,
-//   loop: true,
-
-//   navigation: {
-//     nextEl: '.gallery__slider .swiper-button-next',
-//     prevEl: '.gallery__slider .swiper-button-prev',
-//   },
-  
-//   breakpoints: {
-//     320: {
-//       slidesPerView: 1.5,
-//       // spaceBetween: 10
-//     },
-//     768: {
-//       slidesPerView: 3,
-//       // spaceBetween: 15
-//     },
-//     1024: {
-//       slidesPerView: 5,
-//       // spaceBetween: 20
-//     }
-//   },
-  
-
-// });
-
-

@@ -1,61 +1,50 @@
 <div class="spacer spacer--120"></div>
 
-
-<!-- <section class="gallery">
-    <div class="container">
-        <h2 class="gallery__title">Галерея</h2>
-        <div class="gallery__slider swiper">
-            <div class="swiper-wrapper">
-                <div class="gallery__slide swiper-slide">
-                    <img src="assets/img/image1.png" alt="photo">
-                </div>
-                <div class="gallery__slide swiper-slide">
-                    <img src="assets/img/image2.png" alt="photo">
-                </div>
-                <div class="gallery__slide swiper-slide">
-                    <img src="assets/img/image3.png" alt="photo">
-                </div>
-                <div class="gallery__slide swiper-slide">
-                    <img src="assets/img/image4.png" alt="photo">
-                </div>
-                <div class="gallery__slide swiper-slide">
-                    <img src="assets/img/image5.png" alt="photo">
-                </div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </div>
-</section> -->
-
 <div class="gallery">
     <div class="container">
 
 
     <h2 class="gallery__title h2">Галерея</h2>
-    
-    <div class="gallery__slider gallery-slider">
-        <div class="slide-item slick-slide">
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop" alt="Горная дорога">
-        </div>
-        <div class="slide-item slick-slide">
-            <img src="https://images.unsplash.com/photo-1464822759844-d150baec3e5a?w=800&h=600&fit=crop" alt="Горное озеро">
-        </div>
-        <div class="slide-item slick-slide">
-            <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&h=600&fit=crop" alt="Древний город">
-        </div>
-        <div class="slide-item slick-slide">
-            <img src="https://images.unsplash.com/photo-1454391304352-2bf4678b1a7a?w=800&h=600&fit=crop" alt="Каньон">
-        </div>
-        <div class="slide-item slick-slide">
-            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&h=600&fit=crop" alt="Горная река">
-        </div>
-        <div class="slide-item slick-slide">
-            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&h=600&fit=crop" alt="Горный пейзаж">
-        </div>
-        <div class="slide-item slick-slide">
-            <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=800&h=600&fit=crop" alt="Лесные горы">
-        </div>
+    <div class="gallery-illustration-1">
+        <img src="assets/img/icons/ill-1.svg" alt="">
+    </div>
+    <div class="gallery-illustration-2">
+        <img src="assets/img/icons/ill-2.svg" alt="">
+    </div>
+    <div id="carousel">
+        <img src="assets/img/image4.png" id="item-1" />
+        <img src="assets/img/image1.png" id="item-2" />
+        <img src="assets/img/image2.png" id="item-3" />
+        <img src="assets/img/image5.png" id="item-4" />
+        <img src="assets/img/image4.png" id="item-5" />
+        <img src="assets/img/image3.png" id="item-6" />
+        <img src="assets/img/image2.png" id="item-7" />
+        <img src="assets/img/image1.png" id="item-8" />
     </div>
 </div>
-</div>
+
+  <style>
+    #carousel {
+      width:100%;
+      height:800px;
+      position:center;
+      clear:both;
+      overflow:hidden;
+    }
+    #carousel img {
+      height:700px;
+      width:500px;
+      visibility:hidden; /* hide images until carousel can handle them */
+      cursor:pointer; /* otherwise it's not as obvious items can be clicked */
+      position:center;
+    }
+#callback-output {
+      height:250px;
+      overflow:scroll;
+    }</style>
+
+  
+
+
+
+
