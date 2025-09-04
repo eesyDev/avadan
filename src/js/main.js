@@ -241,6 +241,24 @@ jQuery(function($){
     arrows: false,
     dots: true
   });
+<<<<<<< HEAD
+=======
+
+  try {
+    const inviteSlider = new Swiper('.invite__slider-wrapper', {
+      centeredSlides: true,
+      slidesPerView: 1,
+      loop: true,
+
+      navigation: {
+        nextEl: '.gallery__slider .swiper-button-next',
+        prevEl: '.gallery__slider .swiper-button-prev',
+      }
+    });
+  } catch(err) {
+
+  }
+>>>>>>> 1d6fa57 (17:01 3.9.25)
 
   try {
     const inviteSlider = new Swiper('.invite__slider-wrapper', {
@@ -271,7 +289,6 @@ jQuery(function($){
       breakpoints: {
         991: {
           slidesPerView: 2,
-          spaceBetween: 15
         },
       },
   })
@@ -285,7 +302,7 @@ jQuery(function($){
       new Swiper(slider, {
         slidesPerView: 1,
         spaceBetween: 10,
-        loop: true,
+        // loop: true,
 
         navigation: {
           nextEl: slider.querySelector('.swiper-button-next.reviews'),

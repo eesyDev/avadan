@@ -7,8 +7,8 @@
         position: relative;
     }
     &-slider {
-        padding: 90px 60px; // размер тени + запас
-        margin: -90px -120px; // компенсируем отступы
+        padding: 60px 40px; // размер тени + запас
+        margin: -60px -40px; // компенсируем отступы
         
         > .slick-list {
             padding: 15px 30px !important;
@@ -20,11 +20,15 @@
             left: 25px;
         }
     }
+    .swiper-slide {
+        height: auto;
+    }
     &-card {
         background-color: #fff;
         box-shadow: 7px 14px 22px rgba(102, 102, 102, .1);
         margin: 0 52px;
         padding: 36px;
+        height: 100%;
         &__top {
             display: flex;
             gap: 24px;
@@ -113,6 +117,7 @@
             height: 20px;
             border-radius: 50%;
             border: 0;
+            left: -10px;
             img {
                 transform: rotate(-180deg);
                 width: 12px;
@@ -124,6 +129,7 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
+            right: -10px;
             img {
                 width: 12px;
             }
@@ -135,8 +141,8 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        top: 100%;
-        left: 46%;
+        top: 98%;
+        left: 45%;
     }
     
     .swiper-button-next-team {
@@ -144,7 +150,93 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
+        top: 98%;
+        right: 45%;
+    }
+}
+@media screen and (max-width: 1199.99px) {
+    .team-card {
+        margin: 0 24px;
+    }
+    .team .swiper-button-prev-team {
+        left: 44%;
+    }
+    .team .swiper-button-next-team {
+        right: 44%;
+    }
+}
+
+@media screen and (max-width: 991.99px) {
+    .team-slider {
+        padding: 40px 30px;
+        margin: -40px -30px;
+    }
+    .team-card {
+        margin: 0 16px;
+    }
+    .team .swiper-button-prev-team {
+        left: 43%;
         top: 100%;
-        right: 46%;
+        width: 30px;
+        height: 30px;
+        img {
+            width: 11px;
+        }
+    }
+    .team .swiper-button-next-team {
+        right: 43%;
+        top: 100%;
+        width: 30px;
+        height: 30px;
+        img {
+            width: 11px;
+        }
+    }
+}
+
+@media screen and (max-width: 767.99px) {
+    .team-slider {
+        padding: 30px 20px;
+        margin: -20px -20px;
+    }
+    .team-card {
+        margin: 0 10px;
+    }
+    .team .swiper-button-prev-team {
+        left: 42%;
+    }
+    .team .swiper-button-next-team {
+        right: 42%;
+    }
+}
+
+@media screen and (max-width: 599.99px) {
+    .team-slider {
+        padding: 30px 10px;
+        margin: -20px -10px;
+    }
+    .team .swiper-button-prev-team {
+        left: 40%;
+    }
+    .team .swiper-button-next-team {
+        right: 40%;
+    }
+    .team .team-reviews-slider .swiper-button-prev {
+        left: -20px;
+    }
+    .team .team-reviews-slider .swiper-button-next {
+        right: -20px;
+    }
+    .team-card {
+        padding: 25px;
+    }
+    .team-card__top {
+        flex-wrap: wrap;
+    }
+    .team-card__img {
+        width: 100%;
+    }
+    .team-card__top-info {
+        width: 100%;
     }
 }

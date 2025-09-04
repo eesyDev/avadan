@@ -32,6 +32,7 @@
     .slick-prev {
         left: calc(50% - 25px);
     }
+<<<<<<< HEAD
     .swiper-wraparrows {
         display: flex;
         justify-content: center;
@@ -44,6 +45,8 @@
             height: 40px;
         }
     }
+=======
+>>>>>>> 1d6fa57 (17:01 3.9.25)
 }
 
 @media (max-width: 1199px) {
@@ -71,7 +74,10 @@
     .invite {
         &__wrapper {
             flex-direction: column;
+<<<<<<< HEAD
             gap: 0;
+=======
+>>>>>>> 1d6fa57 (17:01 3.9.25)
         }
         &__slider-wrapper {
             width: 100%;
@@ -90,11 +96,15 @@
 @media (max-width: 599px) {
     .invite {
         &__slider-wrapper {
+<<<<<<< HEAD
             padding-bottom: 30px;
+=======
+>>>>>>> 1d6fa57 (17:01 3.9.25)
             img {
                 height: 280px;
             }
         }
+<<<<<<< HEAD
         .swiper-wraparrows {
             .swiper-button-prev, .swiper-button-next {
                 width: 25px;
@@ -102,6 +112,8 @@
                 margin: 0 10px;
             }
         }
+=======
+>>>>>>> 1d6fa57 (17:01 3.9.25)
     }
 }
 
