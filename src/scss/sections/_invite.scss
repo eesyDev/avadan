@@ -32,6 +32,18 @@
     .slick-prev {
         left: calc(50% - 25px);
     }
+    .swiper-wraparrows {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        .swiper-button-prev, .swiper-button-next {
+            position: static;
+            margin: 0 20px;
+            width: 40px;
+            height: 40px;
+        }
+    }
 }
 
 @media (max-width: 1199px) {
@@ -59,6 +71,7 @@
     .invite {
         &__wrapper {
             flex-direction: column;
+            gap: 0;
         }
         &__slider-wrapper {
             width: 100%;
@@ -77,8 +90,16 @@
 @media (max-width: 599px) {
     .invite {
         &__slider-wrapper {
+            padding-bottom: 30px;
             img {
                 height: 280px;
+            }
+        }
+        .swiper-wraparrows {
+            .swiper-button-prev, .swiper-button-next {
+                width: 25px;
+                height: 25px;
+                margin: 0 10px;
             }
         }
     }

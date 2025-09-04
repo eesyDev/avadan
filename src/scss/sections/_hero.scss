@@ -184,6 +184,7 @@
         &__wrapper {
             display: flex;
             gap: 20px;
+            
         }
         select, input {
             border-radius: 50px;
@@ -193,6 +194,7 @@
             padding-left: 32px;
             background-color: rgba(173, 173, 173, .5);
             border: 0;
+            font-family: var(--font-family);
             &::placeholder {
                 color: #fff;
             }
@@ -203,8 +205,8 @@
         }
         .form-descr {
             font-size: 11px;
-            margin-bottom: 28px;
-            letter-spacing: 2%;
+            font-weight: 300;
+            margin-bottom: 18px;
             text-align: left;
             max-width: 341px;
         }
@@ -256,6 +258,13 @@
             }
         }
     }
+    .single-tour-hero {
+        .hero {
+            &__wrapper {
+                max-width: 90%;
+            }
+        }
+    }
 }
 
 @media (max-width: 1199px) {
@@ -279,6 +288,13 @@
             .submit-form {
                 width: 64px;
                 height: 64px;
+            }
+        }
+    }
+    .single-tour-hero {
+        .hero {
+            &__wrapper {
+                max-width: 100%;
             }
         }
     }
@@ -312,6 +328,27 @@
         &__filter {
             select, input {
                 width: 175px;
+            }
+        }
+    }
+    .single-tour-hero {
+        .single-tour-hero-form{
+            input {
+                width: 100%;
+            }
+            &__wrapper {
+                flex-wrap: wrap;
+                column-gap: 4%;
+                row-gap: 20px;
+            }
+            &__item {
+                width: 48%;
+                input {
+                    width: 100%;
+                }
+            }
+            .button {
+                width: 48%;
             }
         }
     }
@@ -446,6 +483,16 @@
             }
         }
     }
+    .single-tour-hero {
+        .single-tour-hero-form{
+            .button {
+                font-size: 11px;
+            }
+            input {
+                font-size: 11px;
+            }
+        }
+    }
 }
 
 @media (max-width: 480px) {
@@ -509,6 +556,20 @@
             }
         }
     }
+    .single-tour-hero {
+        .single-tour-hero-form {
+            input {
+                padding-left: 16px;
+            }
+            .button {
+                font-size: 9px;
+                padding: 8px 12px;
+            }
+            &__wrapper {
+                row-gap: 14px;
+            }
+        }
+    }
 }
 
 @media (max-width: 375px) {
@@ -522,4 +583,8 @@
             bottom: 32px;
         }
     }
+}
+
+.plane {
+    display: none; // DELETE
 }
