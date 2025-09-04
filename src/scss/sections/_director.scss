@@ -146,8 +146,12 @@
 @media (max-width: 599px) {
     .director {
         &__photo {
+<<<<<<< HEAD
             width: 65%;
             height: auto;
+=======
+            width: 35%;
+>>>>>>> 1d6fa57 (17:01 3.9.25)
         }
         &__right {
             width: 60%;
@@ -158,7 +162,11 @@
 @media (max-width: 480px) {
     .director {
         &__photo {
+<<<<<<< HEAD
             width: 80%;
+=======
+            width: 50%;
+>>>>>>> 1d6fa57 (17:01 3.9.25)
         }
         &__right {
             width: 90%;
